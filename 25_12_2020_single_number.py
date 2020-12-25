@@ -20,3 +20,11 @@ def single_number_set(nums: List[int]) -> int:
 
 
 assert single_number_set([4, 1, 2, 1, 2]) == 4
+
+
+def single_number_math(nums: List[int]) -> int:
+    """2∗(a+b+c)−(a+a+b+b+c)=c"""
+    return 2*sum(set(nums))-sum(nums)
+
+
+assert single_number_math([4, 1, 2, 1, 2]) == 4
